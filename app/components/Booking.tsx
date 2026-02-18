@@ -95,7 +95,7 @@ const Booking = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) 
                 </svg>
               </div>
               <label htmlFor="privacy" className="text-xs md:text-sm text-gray-400 font-medium leading-relaxed cursor-pointer select-none">
-                By clicking, you agree to our <a href="#" className="underline decoration-primary/30 underline-offset-4 font-bold text-[#4B5563] hover:text-primary transition-colors">Privacy Policy</a> and marketing communication
+                By clicking, you agree to our <a href="/pages/privacy" className="underline decoration-primary/30 underline-offset-4 font-bold text-[#4B5563] hover:text-primary transition-colors">Privacy Policy</a> and marketing communication
               </label>
             </div>
 

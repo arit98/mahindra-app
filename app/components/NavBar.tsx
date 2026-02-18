@@ -3,17 +3,18 @@ import React, { useState, Dispatch, SetStateAction } from 'react'
 import { PhoneCall, Menu, X, Timer } from 'lucide-react'
 import Logo from './Logo'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function NavBar({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) {
     return (
         <nav className="sticky top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-28 md:px-8 h-20 md:h-24 shadow-sm bg-black/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
             {/* Desktop Logo */}
-            <div className="hidden md:flex md:w-64 lg:w-[24rem] items-center space-x-2 brightness-0 invert opacity-90 transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <Link href="/" className="hidden md:flex md:w-64 lg:w-[24rem] items-center space-x-2 brightness-0 invert opacity-90 transform hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <Logo />
-            </div>
+            </Link>
 
             {/* Mobile Logo */}
-            <div className='flex md:hidden items-center relative w-32 h-10 brightness-0 invert opacity-90 transform hover:scale-105 transition-transform duration-300 cursor-pointer'>
+            <Link href="/" className='flex md:hidden items-center relative w-32 h-10 brightness-0 invert opacity-90 transform hover:scale-105 transition-transform duration-300 cursor-pointer'>
                 <Image
                     src="/assets/images/mob-logo.png"
                     alt="Mobile Logo"
@@ -21,7 +22,7 @@ export default function NavBar({ setModal }: { setModal: Dispatch<SetStateAction
                     style={{ objectFit: 'contain' }}
                     priority
                 />
-            </div>
+            </Link>
 
             {/* btn */}
             <button

@@ -19,7 +19,6 @@ import MobHeroBackground from "@/app/components/hero/MobileHeroBackground";
 import Booking from "@/app/components/Booking";
 
 export default function LandingPage() {
-
     const [modal, setModal] = useState<boolean>(false);
 
     const features = [
