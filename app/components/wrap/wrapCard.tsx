@@ -41,7 +41,7 @@ const WrapCard: React.FC<WrapCardProps> = ({ type, image = "/assets/images/cardB
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-10 py-2.5 rounded-full border border-slate-800/80 text-slate-100 font-bold hover:bg-slate-900 hover:text-white transition-all duration-300 backdrop-blur-md bg-white/20 shadow-[0_4px_14px_0_rgba(255,255,255,0.1)] cursor-pointer"
+                            className="px-10 py-2.5 rounded-full border border-slate-800/80 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition-all duration-300 bg-transparent shadow-[0_4px_14px_0_rgba(255,255,255,0.1)] cursor-pointer"
                         >
                             View Plan
                         </motion.button>

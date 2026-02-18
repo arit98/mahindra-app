@@ -1,4 +1,8 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import { useEffect } from "react";
 
 interface GalleryItemProps {
     src: string;
@@ -6,25 +10,27 @@ interface GalleryItemProps {
     className?: string;
 }
 
-export const GalleryItem: React.FC<GalleryItemProps> = ({ src, label, className }) => (
-    <div className={`relative group overflow-hidden rounded-3xl shadow-xl transition-transform duration-500 hover:scale-[1.02] ${className}`}>
-        <div className="aspect-square relative w-full h-full min-h-[200px]">
-            <Image
-                src={src}
-                alt={label}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+export const GalleryItem: React.FC<GalleryItemProps> = ({ src, label, className }) => {
+    useEffect(() => console.log(src))
+    return (
+        <div className={`relative group overflow-hidden md:rounded-3xl rounded-xl shadow-xl transition-transform duration-500 hover:scale-[1.02] ${className}`}>
+            <div className={`aspect-square relative w-full h-full min-h-[150px] ${src.includes("/assets/images/gal/6550e6b4a3afe9337004a5de39e085f24f34278e.jpg") ? "md:min-h-[200px]" : "md:min-h-[300px]"}`}>
+                <Image
+                    src={src}
+                    alt={label}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
 
-            {/* Label */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                <span className="text-white font-medium text-lg tracking-wide uppercase drop-shadow-md">
-                    {label}
-                </span>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+                    <span className="text-white font-medium md:text-lg text-xs tracking-wide uppercase drop-shadow-md">
+                        {label}
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+}

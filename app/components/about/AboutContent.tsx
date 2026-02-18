@@ -15,14 +15,14 @@ export default function AboutContent() {
             {/* About Section */}
             <div className="mb-20 lg:mb-32">
                 <div className="text-center mb-12 lg:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif">
                         <span className="text-[#EE3131]">About</span>{' '}
                         <span className="text-[#333333]">Mahindra Blossom</span>
                     </h2>
-                    <p className="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] font-medium text-[#666666] uppercase mt-3">
+                    <p className="italic text-[9px] md:text-sm tracking-[0.2em] md:tracking-[0.3em] font-medium text-[#666666] uppercase mt-3">
                         PREMIUM APARTMENTS IN WHITEFIELD, BENGALURU
                     </p>
-                    <div className="flex justify-center mt-6 lg:mt-8">
+                    <div className="flex justify-center my-8 lg:mt-8">
                         <Image
                             src="/assets/images/breaker.png"
                             alt="divider"
@@ -34,7 +34,7 @@ export default function AboutContent() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                    <div className="space-y-4 md:space-y-6 text-[#444444] leading-relaxed text-sm md:text-base lg:text-[17px] text-center lg:text-left">
+                    <div className="space-y-4 md:space-y-6 text-[#444444] leading-relaxed text-sm md:text-base lg:text-[17px] text-start lg:text-left">
                         <p>
                             <span className="font-bold">Mahindra Blossom</span> is a thoughtfully designed <span className="font-bold">premium residential apartment project in Whitefield, Bangalore</span>, developed by <span className="font-bold text-[#EE3131]">Mahindra Lifespaces</span>, part of the trusted Mahindra Group. Known for quality construction, transparency, and sustainable development, Mahindra Lifespaces has delivered landmark residential communities across India.
                         </p>
@@ -50,7 +50,7 @@ export default function AboutContent() {
                     </div>
 
                     <div className="relative h-[400px] md:h-[450px] lg:h-[550px] flex items-center justify-center lg:justify-end overflow-hidden lg:overflow-visible">
-                        <div className="relative w-full max-w-[280px] md:max-w-[320px] h-[380px] md:h-[420px] lg:mr-8">
+                        <div className="relative w-full max-w-[200px] md:max-w-[320px] h-[280px] md:h-[420px] lg:mr-8">
                             {Banners.map((uni, idx) => (
                                 <div
                                     key={idx}
@@ -80,12 +80,12 @@ export default function AboutContent() {
 
             {/* Features Section */}
             <div className="pb-12 lg:pb-20">
-                <div className="text-center mb-12 lg:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif">
+                <div className="text-center mb-8 lg:mb-16">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif">
                         <span className="text-[#333333]">Features &</span>{' '}
                         <span className="text-[#EE3131]">Highlights</span>
                     </h2>
-                    <p className="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] font-medium text-[#666666] uppercase mt-3">
+                    <p className="text-[9px] md:text-sm tracking-[0.2em] md:tracking-[0.3em] font-medium text-[#666666] uppercase mt-3">
                         WHY BUY A HOME AT MAHINDRA BLOSSOM
                     </p>
                     <div className="flex justify-center mt-6 lg:mt-8">
@@ -101,7 +101,7 @@ export default function AboutContent() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-                        <div className="relative w-full max-w-[300px] md:max-w-[360px] h-[480px] md:h-[580px] rounded-xl overflow-hidden shadow-2xl">
+                        <div className="relative w-full max-w-[200px] md:max-w-[360px] h-[280px] md:h-[580px] rounded-xl overflow-hidden shadow-2xl">
                             <Image
                                 src="/assets/images/balcony.jpg"
                                 alt="Mahindra Blossom View"

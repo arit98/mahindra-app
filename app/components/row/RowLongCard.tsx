@@ -17,7 +17,7 @@ const RowLongCard: React.FC<RowLongCardProps> = ({ image, title, items }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full max-w-[300px] bg-white rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col group border border-slate-100"
+            className="w-full max-w-[300px] min-w-0 mx-auto bg-white rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col group border border-slate-100"
         >
             {/* Image Section */}
             <div className="relative w-full aspect-[4.5/5.5] rounded-t-3xl overflow-hidden">

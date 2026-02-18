@@ -36,7 +36,7 @@ const RowCard: React.FC<RowCardProps> = ({ type, size, price, isSoldOut }) => {
                     <p className='text-sm font-medium text-slate-700'>{size}{' '}sq.ft</p>
                     <p className='font-bold text-lg text-slate-900'>₹{price} <span className='italic font-extralight text-sm'>Onwards</span></p>
 
-                    <button className={`w-fit bg-transparent px-10 py-1.5 rounded-full border border-slate-800 text-slate-900 font-medium`}>
+                    <button className={`px-10 py-2.5 rounded-full border border-slate-800/80 text-slate-900 font-bold hover:bg-slate-900 transition-all duration-300 bg-transparent shadow-[0_4px_14px_0_rgba(255,255,255,0.1)] ${isSoldOut ? 'hover:bg-transparent cursor-not-allowed' : 'hover:text-white cursor-pointer'}`}>
                         Get Quote
                     </button>
                 </div>
