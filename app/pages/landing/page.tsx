@@ -20,7 +20,7 @@ import Booking from "@/app/components/Booking";
 
 export default function LandingPage() {
 
-    const [modal, setModal] = useState<boolean>();
+    const [modal, setModal] = useState<boolean>(false);
 
     const features = [
         { text: "8 Acres | 1 Towers | 6 Wings | 733 Units" },
