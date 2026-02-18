@@ -12,7 +12,7 @@ export default function AboutContent() {
     const [activeBanner, setActiveBanner] = useState(0);
     return (
         <div className="container mx-auto relative z-10 py-12 lg:py-24">
-            {/* About Section */}
+            {/* about */}
             <div className="mb-20 lg:mb-32">
                 <div className="text-center mb-12 lg:mb-16">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif">
@@ -78,7 +78,7 @@ export default function AboutContent() {
                 </div>
             </div>
 
-            {/* Features Section */}
+            {/* feature */}
             <div className="pb-12 lg:pb-20">
                 <div className="text-center mb-8 lg:mb-16">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif">

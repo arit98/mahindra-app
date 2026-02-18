@@ -19,7 +19,7 @@ const RowLongCard: React.FC<RowLongCardProps> = ({ image, title, items }) => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full max-w-[300px] min-w-0 mx-auto bg-white rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col group border border-slate-100"
         >
-            {/* Image Section */}
+
             <div className="relative w-full aspect-[4.5/5.5] rounded-t-3xl overflow-hidden">
                 <Image
                     src={image}
@@ -29,14 +29,13 @@ const RowLongCard: React.FC<RowLongCardProps> = ({ image, title, items }) => {
                 />
             </div>
 
-            {/* Content Section */}
+            {/* main content */}
             <div className="px-6 py-10 flex flex-col">
-                {/* Title */}
                 <h3 className="text-center font-bold text-[#4B4D4C] text-[1.15rem] uppercase tracking-widest leading-[1.4] mb-10 min-h-14 flex items-center justify-center">
                     {title}
                 </h3>
 
-                {/* List Items */}
+                {/* list */}
                 <div className="w-full space-y-7 px-1">
                     {items.map((item, index) => (
                         <div key={index} className="flex items-start gap-4">

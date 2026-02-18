@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
             <NavBar setModal={setModal} />
 
             <main className="grow relative w-full overflow-hidden flex flex-col items-center">
-                {/* Background Image - Decorative Tree */}
+
                 <div className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none flex items-center justify-center">
                     <Image
                         src="/assets/images/tree.png"
@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
                 </div>
 
                 <div className="relative z-10 container mx-auto px-6 py-12 md:py-20 max-w-7xl flex flex-col items-center">
-                    {/* Header Section */}
+                    {/* heading */}
                     <div className="text-center space-y-4 mb-8">
                         <h1 className="text-5xl md:text-6xl font-serif leading-tight">
                             <span className="text-primary">Privacy</span> Policy
@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
                         </div>
                     </div>
 
-                    {/* Content Section */}
+                    {/* main content */}
                     <div className="w-full max-w-4xl space-y-12 text-sm md:text-base leading-relaxed mt-10">
 
                         <section className="space-y-4">

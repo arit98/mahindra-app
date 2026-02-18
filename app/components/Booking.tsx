@@ -12,9 +12,8 @@ const Booking = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) 
         className="relative w-full h-full md:h-auto md:max-w-6xl bg-white md:rounded-[3.5rem] overflow-x-hidden overflow-y-auto md:overflow-hidden flex flex-col md:flex-row shadow-2xl animate-in zoom-in-95 duration-300 lg:scale-70 md:scale-75 scale-80 cursor-default rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Left Side: Content & Illustration */}
+        {/* left part */}
         <div className="relative w-full md:w-[48%] p-6 md:p-12 flex flex-col justify-start md:justify-center min-h-[140px] md:min-h-0">
-          {/* Skyline Illustration */}
           <div className="absolute top-12 md:top-auto md:bottom-8 left-0 w-full h-[35%] md:h-[50%] opacity-30 pointer-events-none select-none">
             <Image
               src="/assets/images/booking.png"
@@ -35,7 +34,7 @@ const Booking = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) 
           </div>
         </div>
 
-        {/* Right Side: Form */}
+        {/* right part */}
         <div className="w-full md:w-[52%] p-6 md:p-20 shadow-[-20px_0_40px_rgba(0,0,0,0.02)]">
           <form className="space-y-4 md:space-y-7 text-slate-900" onSubmit={(e) => e.preventDefault()}>
             <div className="space-y-1 md:space-y-2">
