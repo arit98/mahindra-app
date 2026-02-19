@@ -35,7 +35,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
     return (
         <div className="flex flex-col space-y-8 z-20 items-center lg:items-start mt-16 lg:mt-8">
             <div className="space-y-4 pt-16">
-                <div className="space-y-1 text-center lg:text-left">
+                <div className="space-y-3 text-center lg:text-left">
                     <h1 className="tracking-tight leading-none font-serif text-3xl md:text-5xl lg:text-7xl">
                         <span className="text-primary inline font-medium">
                             {title.first}
@@ -44,7 +44,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
                             {title.second}
                         </span>
                     </h1>
-                    <p className="text-[#cccccc] text-[0.68rem] md:text-sm lg:text-base tracking-[0.4em] font-medium uppercase italic lg:ml-1">
+                    <p className="text-[#cccccc] text-[0.68rem] md:text-sm lg:text-base tracking-[0.4em] font-medium uppercase italic">
                         {subtitle}
                     </p>
                 </div>
@@ -53,9 +53,9 @@ const HeroContent: React.FC<HeroContentProps> = ({
                     <Image
                         src={breakerIcon}
                         alt="divider"
-                        width={350}
+                        width={250}
                         height={24}
-                        className="opacity-90 w-full max-w-[280px] md:max-w-[250px]"
+                        className="opacity-90 w-full max-w-[280px] md:max-w-[500px]"
                     />
                 </div>
             </div>

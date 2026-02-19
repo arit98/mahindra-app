@@ -26,9 +26,9 @@ export default function AboutContent() {
                         <Image
                             src="/assets/images/breaker.png"
                             alt="divider"
-                            width={350}
+                            width={600}
                             height={24}
-                            className="opacity-90 w-full max-w-[250px] md:max-w-[350px]"
+                            className="opacity-90 w-full max-w-[280px] md:max-w-[500px]"
                         />
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export default function AboutContent() {
                             alt="divider"
                             width={350}
                             height={24}
-                            className="opacity-90 w-full max-w-[250px] md:max-w-[350px]"
+                            className="opacity-90 w-full max-w-[250px] md:max-w-[500px]"
                         />
                     </div>
                 </div>

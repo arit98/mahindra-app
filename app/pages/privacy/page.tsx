@@ -1,16 +1,12 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/footer/Footer'
 import Booking from '../../components/Booking'
 
 const PrivacyPolicy = () => {
-    const [modal, setModal] = useState<boolean>(false);
 
     return (
         <div className="relative min-h-screen bg-white text-[#4B4D4C] flex flex-col selection:bg-primary/20">
-            <NavBar setModal={setModal} />
 
             <main className="grow relative w-full overflow-hidden flex flex-col items-center">
 
@@ -101,9 +97,7 @@ const PrivacyPolicy = () => {
                 </div>
             </main>
 
-            <Footer />
-
-            {modal && <Booking setModal={setModal} />}
+            <Booking />
         </div>
     )
 }

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -6,7 +7,7 @@ import Link from 'next/link';
 const Footer = () => {
     const pathname = usePathname();
     return (
-        <footer className="relative bg-primary text-white pt-12 md:pt-48 pb-12 px-4 md:px-8 mt-20 md:mt-40">
+        <footer className="relative bg-primary text-white pt-12 md:pt-48 pb-12 px-4 md:px-8 mt-20 md:mt-40 lg:mt-64">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
 
                 {/* video section */}

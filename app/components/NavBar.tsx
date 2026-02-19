@@ -1,13 +1,17 @@
 "use client"
-import React, { useState, Dispatch, SetStateAction } from 'react'
-import { PhoneCall, Menu, X, Timer } from 'lucide-react'
+import React from 'react'
+import { PhoneCall, Timer } from 'lucide-react'
 import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useAppDispatch } from '../store/hooks'
+import { openModal } from '../store/modalSlice'
 
-export default function NavBar({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) {
+export default function NavBar() {
+    const dispatch = useAppDispatch();
+
     return (
-        <nav className="sticky top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-28 md:px-8 h-20 md:h-24 shadow-sm bg-black/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+        <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-28 md:px-8 h-20 md:h-24 shadow-sm bg-black/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
             {/* desktop logo */}
             <Link href="/" className="hidden md:flex md:w-64 lg:w-[24rem] items-center space-x-2 brightness-0 invert opacity-90 transform hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <Logo />
@@ -26,7 +30,7 @@ export default function NavBar({ setModal }: { setModal: Dispatch<SetStateAction
 
             {/* mobile btn */}
             <button
-                onClick={() => setModal(true)}
+                onClick={() => dispatch(openModal('booking'))}
                 className="md:hidden lg:hidden flex items-center justify-center gap-1 bg-primary hover:bg-primary/70 transition-all duration-300 cursor-pointer px-2 py-1 rounded-full shadow-lg shadow-red-900/40 hover:-translate-y-0.5 active:translate-y-0"
             >
                 <Timer size={15} />
@@ -37,7 +41,7 @@ export default function NavBar({ setModal }: { setModal: Dispatch<SetStateAction
             
             {/* desktop btn */}
             <button
-                onClick={() => setModal(true)}
+                onClick={() => dispatch(openModal('booking'))}
                 className="md:flex lg:flex hidden items-center justify-center gap-3 bg-primary hover:bg-primary/70 transition-all duration-300 cursor-pointer md:px-4 lg:px-8 lg:py-3 md:py-2 rounded-full shadow-lg shadow-red-900/40 hover:-translate-y-0.5 active:translate-y-0"
             >
                 <PhoneCall size={15} className="md:flex lg:hidden hidden text-white fill-white" />

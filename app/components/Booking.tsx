@@ -1,17 +1,35 @@
 "use client"
-import React, { Dispatch, SetStateAction } from 'react'
+import React from 'react'
 import Image from 'next/image'
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { closeModal } from '../store/modalSlice';
 
-const Booking = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) => {
+const Booking = () => {
+  const dispatch = useAppDispatch();
+  const { isOpen, modalType } = useAppSelector((state) => state.modal);
+
+  if (!isOpen || modalType !== 'booking') return null;
+
   return (
     <div
-      className="fixed inset-0 z-200 flex items-start md:items-center justify-center bg-black/60 backdrop-blur-sm md:p-4 animate-in fade-in duration-300 cursor-pointer"
-      onClick={() => setModal(false)}
+      className="fixed inset-0 z-200 flex items-start md:items-center justify-center bg-black/60 backdrop-blur-sm md:p-4 animate-in fade-in duration-300"
+      onClick={() => dispatch(closeModal())}
     >
       <div
         className="relative w-full h-full md:h-auto md:max-w-6xl bg-white md:rounded-[3.5rem] overflow-x-hidden overflow-y-auto md:overflow-hidden flex flex-col md:flex-row shadow-2xl animate-in zoom-in-95 duration-300 lg:scale-70 md:scale-75 scale-80 cursor-default rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* close button */}
+        {/* <button
+          onClick={() => dispatch(closeModal())}
+          className="absolute top-4 right-4 md:top-8 md:right-8 z-10 p-2 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close modal"
+        >
+          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button> */}
+
         {/* left part */}
         <div className="relative w-full md:w-[48%] p-6 md:p-12 flex flex-col justify-start md:justify-center min-h-[140px] md:min-h-0">
           <div className="absolute top-12 md:top-auto md:bottom-8 left-0 w-full h-[35%] md:h-[50%] opacity-30 pointer-events-none select-none">
@@ -100,7 +118,7 @@ const Booking = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) 
 
             <button
               type="submit"
-              className="w-full bg-primary text-white font-extrabold py-4 md:py-5 rounded-full text-base md:text-md lg:text-xl hover:bg-primary/90 hover:shadow-[0_20px_40px_-10px_rgba(225,29,72,0.4)] active:scale-[0.98] transition-all duration-300 mt-2 md:mt-4 shadow-xl shadow-primary/20"
+              className="w-full bg-primary text-white font-extrabold py-4 md:py-5 rounded-full text-base md:text-md lg:text-xl hover:bg-primary/90 hover:shadow-[0_20px_40px_-10px_rgba(225,29,72,0.4)] active:scale-[0.98] transition-all duration-300 mt-2 md:mt-4 shadow-xl shadow-primary/20 cursor-pointer"
             >
               Book an Appointment
             </button>
